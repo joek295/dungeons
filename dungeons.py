@@ -851,6 +851,11 @@ def player_move_or_attack(dx, dy):
         player.move(dx, dy)
         fov_recompute = True
  
+def throw_missile(x, y):
+    missile = inventory_menu()
+    if missile is not None:
+        print "Threw", missile
+
 def menu(header, options, width):
     if len(options) > 26: raise ValueError('Cannot have a menu with more than 26 options.')
  
